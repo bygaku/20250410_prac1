@@ -4,8 +4,10 @@
 
 InputComponent::InputComponent(std::weak_ptr<Object> object)
     : Component { object }
-    , m_horizontal(0.0f)
-    , m_vertical(0.0f)
+    , m_LX(0.0f)
+    , m_LY(0.0f)
+    , m_RX(0.0f)
+    , m_RY(0.0f)
 {
 }
 
@@ -17,14 +19,23 @@ void InputComponent::Update(const float& deltaTime)
     {
         // 左スティックのX軸（移動）
         const float norm = 32767.0f;
-        float lstickX = input.ThumbLX / norm;
-        float lstickY = input.ThumbLY / norm;
-        m_horizontal = ApplyDeadZone(lstickX);
-        m_vertical = ApplyDeadZone(lstickY);
+        
+        float lStickX = input.ThumbLX / norm;
+        float lStickY = input.ThumbLY / norm;
+        float rStickX = input.ThumbRX / norm;
+        float rStickY = input.ThumbRY / norm;
+
+        m_LX = ApplyDeadZone(lStickX);
+        m_LY = ApplyDeadZone(lStickY);
+        m_RX = ApplyDeadZone(rStickX);
+        m_RY = ApplyDeadZone(rStickY);
     }
     else
     {
-        m_horizontal = 0;
+        m_LX = 0.0f;
+        m_LY = 0.0f;
+        m_RX = 0.0f;
+        m_RY = 0.0f;
     }
 
     //if (CheckHitKey(KEY_INPUT_RIGHT))

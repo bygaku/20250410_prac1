@@ -47,6 +47,10 @@ private:
     GameManager(const GameManager&) = delete;
     GameManager& operator=(const GameManager&) = delete;
 
+#ifdef _DEBUG
+    void RenderFloorGrid() const;
+#endif // DEBUG
+
 private:
     static GameManager* m_instance;                 /// @brief ‚±‚ÌƒNƒ‰ƒX‚ÌŽÀ‘Ì
 

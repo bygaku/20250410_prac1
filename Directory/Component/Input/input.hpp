@@ -27,19 +27,28 @@ public:
 
 	#pragma region 外部に公開する入力状態
 
-	/// @brief 傾けXの量
-	float GetHorizontal() const { return m_horizontal; };
-	/// @brief 傾けYの量
-	float GetVertical() const { return m_vertical; };
+	/// @brief 左スティック傾けXの量
+	float GetLeftHorizontal() const { return m_LX; };
+	/// @brief 左スティック傾けYの量
+	float GetLeftVertical() const { return m_LY; };
+
+
+	/// @brief 右スティック傾けXの量
+	float GetRightHorizontal() const { return m_RX; };
+	/// @brief 右スティック傾けYの量
+	float GetRightVertical() const { return m_RY; };
+
 #pragma endregion
 private:
 	/// デッドゾーン処理
 	float ApplyDeadZone(float value) const;
 
 private:
-	float m_horizontal;
-	float m_vertical;
+	float m_LX;
+	float m_LY;
+	float m_RX;
+	float m_RY;
 
-	const float k_deadZone	= 0.2f;
+	const float k_deadZone	= 0.3f;
 
 };

@@ -28,6 +28,7 @@ public:
 private:
 	const float k_near;				/// @brief 最少描画距離
 	const float k_far;				/// @brief 最大描画距離
+	const float k_Speed;
 	VECTOR m_lookPos;
 	VECTOR m_movePos;
 	VECTOR m_offset;				/// @brief カメラのオフセット値

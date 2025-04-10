@@ -85,11 +85,7 @@ void GameManager::PlayGame()
         DrawFormatString(0, 40, GetColor(255, 0, 0), "%d",   FPS::GetInstance().GetFpsTarget());
         DrawFormatString(0, 60, GetColor(255, 0, 0), "%.2f", FPS::GetInstance().GetTimeFromBoot());
 
-        float lineSize = 500.0f;
-        DrawLine3D(VGet(-lineSize, 0, 0), VGet(lineSize, 0, 0), GetColor(255, 0, 0));
-        DrawLine3D(VGet(0, -lineSize, 0), VGet(0, lineSize, 0), GetColor(0, 255, 0));
-        DrawLine3D(VGet(0, 0, -lineSize), VGet(0, 0, lineSize), GetColor(0, 0, 255));
-
+        RenderFloorGrid();
 #endif // FPS/TIMEの表示
 
         FPS::GetInstance().SleepForNextFrame();
@@ -132,3 +128,19 @@ GameManager::~GameManager()
     // 明示的インスタンス破棄
     FPS::Destroy();
 }
+
+#ifdef _DEBUG
+void GameManager::RenderFloorGrid() const
+{
+    float lineSize = 4000.0f;
+    for (int i = -16; i < 26; i++)
+    {
+        auto grid = static_cast<float>(i * 200);
+        DrawLine3D(VGet(-lineSize, 0, grid), VGet(lineSize, 0, grid), GetColor(255, 0, 0));
+        DrawLine3D(VGet(grid, 0, -lineSize), VGet(grid, 0, lineSize), GetColor(0, 0, 255));
+    }
+
+    DrawLine3D(VGet(0, -lineSize, 0), VGet(0, lineSize, 0), GetColor(0, 255, 0));
+
+}
+#endif // _DEBUG

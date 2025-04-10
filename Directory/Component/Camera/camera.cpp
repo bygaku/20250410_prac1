@@ -10,7 +10,8 @@
 CameraComponent::CameraComponent(std::weak_ptr<Object> object)
     : Component { object }
     , k_near(1.0f/*float(Json::getInstance()->GetData()["CameraNear"])*/)
-    , k_far (1000.0f/*float(Json::getInstance()->GetData()["CameraFar"])*/)
+    , k_Speed(5.0f)
+    , k_far (4000.0f/*float(Json::getInstance()->GetData()["CameraFar"])*/)
     , m_offset (VGet(0.0f, 0.0f, 0.0f))
     , m_lookPos(VGet(0.0f, 100.0f, 0.0f))
     , m_movePos(VGet(0.0f, 200.f, 0.0f))
@@ -25,11 +26,14 @@ void CameraComponent::Update(const float& deltaTime)
 
     if (input)
     {
-        m_lookPos.x += input->GetHorizontal();
-        m_movePos.x += input->GetHorizontal();     
+        m_lookPos.x += input->GetLeftHorizontal() * k_Speed;
+        m_movePos.x += input->GetLeftHorizontal() * k_Speed;     
 
-        m_lookPos.y += input->GetVertical();
-        m_movePos.y += input->GetVertical();
+        m_lookPos.y += input->GetLeftVertical() * k_Speed;
+        m_movePos.y += input->GetLeftVertical() * k_Speed;
+
+        m_lookPos.x += input->GetRightHorizontal() * k_Speed;
+        m_lookPos.y += input->GetRightVertical()   * k_Speed;
 
         DrawString(0, 80, "Xinput: LStick‚ÅƒJƒƒ‰À•W‚ÌˆÚ“®", GetColor(255, 0, 0));
     }
