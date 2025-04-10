@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Directory\Component\component_base.cpp">
+      <Filter>Directory\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Object\ObjectBase\object_base.cpp">
+      <Filter>Directory\Bases</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\GameSystem\GameManager\game_manager.cpp">
+      <Filter>Directory\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Object\ObjectManager\object_manager.cpp">
+      <Filter>Directory\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Component\Camera\camera.cpp">
+      <Filter>Directory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Component\Input\input.cpp">
+      <Filter>Directory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\GameSystem\GameSetting\game_setting.cpp">
+      <Filter>Directory\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\GameSystem\Window\window.cpp">
+      <Filter>Directory\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Component\Model\model.cpp">
+      <Filter>Directory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Component\Transform\transform.cpp">
+      <Filter>Directory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\Component\Renderer\renderer.cpp">
+      <Filter>Directory\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\GameSystem\FPS\fps.cpp">
+      <Filter>Directory\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="Directory\main.cpp">
+      <Filter>Directory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Directory\Component\component_base.hpp">
+      <Filter>Directory\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Object\ObjectBase\object_base.hpp">
+      <Filter>Directory\Bases</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\GameSystem\GameManager\game_manager.hpp">
+      <Filter>Directory\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Object\ObjectManager\object_manager.hpp">
+      <Filter>Directory\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Component\Camera\camera.hpp">
+      <Filter>Directory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Component\Input\input.hpp">
+      <Filter>Directory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\GameSystem\GameSetting\game_setting.hpp">
+      <Filter>Directory\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\GameSystem\Window\window.hpp">
+      <Filter>Directory\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\GameSystem\Window\window_data.hpp">
+      <Filter>Directory\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Component\Model\model.hpp">
+      <Filter>Directory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Component\Transform\transform.hpp">
+      <Filter>Directory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Component\Renderer\renderer.hpp">
+      <Filter>Directory\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\GameSystem\FPS\fps.hpp">
+      <Filter>Directory\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\ipc.hpp">
+      <Filter>Directory</Filter>
+    </ClInclude>
+    <ClInclude Include="Directory\Object\object_tag.hpp">
+      <Filter>Directory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Directory">
+      <UniqueIdentifier>{2815796d-0e88-4a24-b0c2-c67ab2cbdfb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Directory\Components">
+      <UniqueIdentifier>{d3395e95-a6e1-4b81-9d76-62234e8ea6e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Directory\Bases">
+      <UniqueIdentifier>{d6319ba7-ea02-4212-8838-ef65936bfb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Directory\Managers">
+      <UniqueIdentifier>{434fb08c-a5b6-4f88-b5ab-f68d017cc608}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Directory\Settings">
+      <UniqueIdentifier>{fa0bd099-bd65-46d8-9105-1a96be496beb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
